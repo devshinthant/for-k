@@ -76,7 +76,7 @@ function startHeartAnimation() {
 }
 
 (function ($) {
-  $.fn.typewriter = function () {
+  $.fn.typewriter = function (callback) {
     this.each(function () {
       var $ele = $(this),
         str = $ele.html(),
@@ -92,6 +92,7 @@ function startHeartAnimation() {
         $ele.html(str.substring(0, progress) + (progress & 1 ? "_" : ""));
         if (progress >= str.length) {
           clearInterval(timer);
+          if (callback) callback(); // Call the callback if provided
         }
       }, 35);
     });
@@ -126,6 +127,13 @@ function showMessages() {
   adjustWordsPosition();
   $("#messages").fadeIn(5000);
 }
+
+$(document).ready(function () {
+  // Start the typewriter animation and then show the images
+  $("#code").typewriter(function () {
+    $("#images-wrapper").fadeIn(1000); // Show the images-wrapper with a fade-in effect
+  });
+});
 
 function adjustWordsPosition() {
   $("#words").css("position", "absolute");

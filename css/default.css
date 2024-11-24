@@ -103,9 +103,9 @@ body {
 /* Images wrapper for mobile */
 #images-wrapper {
   margin-top: 20px;
-  display: flex;
   height: 200px;
   flex-wrap: wrap;
+  display: none;
   gap: 10px;
   justify-content: start;
 }
