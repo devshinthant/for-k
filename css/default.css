@@ -1,21 +1,119 @@
-﻿body{margin:0;padding:0;background:#ffe;font-size:12px;overflow:auto}
-#mainDiv{width:100%;height:100%}
-#loveHeart{float:left;width:670px;height:625px}
-#garden{width:100%;height:100%}
-#elapseClock{text-align:right;font-size:18px;margin-top:10px;margin-bottom:10px}
-#words{font-family:"sans-serif";width:500px;font-size:24px;color:#666}
-#messages{display:none;text-align: center;font-size: 30px}
-#elapseClock .digit{font-family:"digit";font-size:40px;text-align: center;}
-#loveu{padding:5px;font-size:22px;margin-top:80px;margin-right:120px;text-align:right;display:none}
-#loveu .signature{margin-top:10px;font-size:20px;font-style:italic}
-#clickSound{display:none}
-#code{float:left;width:440px;height:400px;color:#333;font-family:"Consolas","Monaco","Bitstream Vera Sans Mono","Courier New","sans-serif";font-size:12px}
-#code .string{color:#2a36ff}
-#code .keyword{color:#7f0055;font-weight:bold}
-#code .placeholder{margin-left:15px}#code .space{margin-left:7px}
-#code .comments{color:#3f7f5f}
-#copyright{margin-top:10px;text-align:center;width:100%;color:#666}
-#errorMsg{width:100%;text-align:center;font-size:24px;position:absolute;top:100px;left:0}
-#copyright a{color:#666}
-#icon{font-size: 48px;color: red;margin: 50 px; align-content: center;}
-#heartspan{align-content: center;text-align: center;margin: 20px;}
+﻿/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  background: #fbcfe8;
+  font-size: 12px;
+  overflow: auto;
+  width: 100vw;
+}
+
+#mainDiv {
+  width: 100%;
+  height: 100%;
+}
+
+/* Main container */
+#content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 140px;
+  padding: 50px;
+}
+
+/* Love heart adjustments for mobile */
+#loveHeart {
+  width: 100%;
+  height: 700px;
+  max-width: none; /* Remove max-width on mobile */
+  max-height: none; /* Remove max-height on mobile */
+}
+
+/* Garden adjustments for mobile */
+#garden {
+  width: 100%;
+  height: 100%;
+}
+
+/* Elapsed clock styling for mobile */
+#elapseClock {
+  text-align: center; /* Center text on mobile */
+  font-size: 14px; /* Smaller font size */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Words container for mobile */
+#words {
+  font-family: "sans-serif";
+  width: 80%; /* Limit the width to avoid overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Smaller font for mobile */
+  color: #666;
+  text-align: center; /* Ensure proper text alignment */
+}
+
+/* Messages container for mobile */
+#messages {
+  display: none;
+  font-size: 24px; /* Larger font for easy readability on mobile */
+  margin-top: 20px;
+}
+
+/* Elapsed clock digits */
+#elapseClock .digit {
+  font-family: "digit";
+  font-size: 32px; /* Adjusted size for readability */
+  text-align: center;
+}
+
+/* Code block for mobile */
+#code {
+  color: #333;
+  width: 100%;
+  font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New",
+    "sans-serif";
+  font-size: 30px; /* Larger font for readability */
+  height: 800px;
+}
+
+#code .string {
+  color: #2a36ff;
+}
+#code .keyword {
+  color: #7f0055;
+  font-weight: bold;
+}
+#code .placeholder {
+  margin-left: 15px;
+}
+#code .space {
+  margin-left: 7px;
+}
+#code .comments {
+  color: #3f7f5f;
+}
+
+/* Images wrapper for mobile */
+#images-wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+}
+
+/* Image styling for mobile */
+#images-wrapper img {
+  object-fit: cover;
+  max-height: 20vh;
+  border-radius: 4px;
+  border: 6px solid white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
