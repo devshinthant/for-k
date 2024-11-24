@@ -4,7 +4,7 @@ body {
   padding: 0;
   background: #fbcfe8;
   font-size: 12px;
-  overflow: auto;
+  overflow: hidden;
   width: 100vw;
 }
 
